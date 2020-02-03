@@ -1,0 +1,21 @@
+
+.table-container {
+  width: 100%;
+  display: inline-block;
+  table {
+    width: 100%;
+    td.action, mat-cell.action {
+      text-align: right;
+      mat-icon {
+        margin-left: 10px;
+        &:not(.disabled) {
+          cursor: pointer;
+          color: indigo;
+        }
+      }
+    }
+    th.action {
+      text-align: right;
+    }
+  }
+}

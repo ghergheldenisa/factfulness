@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-1">
+      <button mat-stroked-button type="button" color="primary" (click)="redirectToHome()">Home</button>
+    </div>
+  </div>
+  <div class="offset-md-4 col-md-4">
+    <form #createFact [formGroup]="form" (submit)="submit()">
+      <div class="row">
+        <mat-form-field class="full-width">
+          <textarea formControlName="text" matInput placeholder="Add your fact"></textarea>
+        </mat-form-field>
+      </div>
+      <div class="row justify-content-md-center">
+        <button style="margin-right: 10px;" mat-stroked-button type="button" color="primary" (click)="redirect()">Cancel</button>
+        <button *ngIf="!id" mat-flat-button type="submit" color="accent">Add</button>
+        <button *ngIf="id" mat-flat-button type="submit" color="accent">Update</button>
+      </div>
+    </form>
+  </div>
+</div>
